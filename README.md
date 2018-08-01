@@ -10,6 +10,7 @@ The goal of this notebook is to extract keywords from a text file using three di
 
 
 **K-core on tokennized data**
+
 This python code takes as input a input_root containing directories of "files.txt" and subdirectories.
 The "files.txt" are tokenized data in the following form : (word,stemmed_word,pos_tag)
 
