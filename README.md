@@ -1,7 +1,7 @@
 # Keywords_extraction_with_GOW
 Graph of words and keywords extraction 
 
-# ***Graph of words and keywords extraction.ipynb***
+## ***Graph of words and keywords extraction.ipynb***
 
 This notebook is dedicated to people who want to **extract keywords** from **text document** or corpus documents using a **graph approach**.
 
@@ -11,7 +11,7 @@ The goal of this notebook is to extract keywords from a text file using three di
 - K-core Number 
 
 
-# ***K-core on tokennized data***
+## ***K-core on tokennized data***
 
 This python code takes as input a input_root containing directories of "files.txt" and subdirectories.
 The "files.txt" are tokenized data in the following form : (word,stemmed_word,pos_tag)
