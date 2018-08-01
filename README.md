@@ -23,14 +23,8 @@ The parameters of this python code are :
 
 - arg2 : output_root (where to save it)
 
-- arg3 : 
-            - 1 if all the files has to be treated independantly
-            
-            - 0 if we want one graph and one keywords .csv file in output (analyzed with all the files)
-- arg4: 
-            - 1 for words in lower case
-            
-            - 0 otherwise
+- arg3 : - 1 if all the files has to be treated independantly - 0 if we want one graph and one keywords .csv file in output (analyzed with all the files)
+- arg4: - 1 for words in lower case - 0 otherwise
             
 - arg5: (int): the value of the windows size. A window size of 5 means that an edge will be created between all the words separated from less than 5 words in the text
 
