@@ -25,13 +25,8 @@ def path_generator(initial_root):
     for root, dirs, files in os.walk(initial_root):
         for name in files:
             all_paths.append(os.path.join(root, name))
-    begin = False
-    exp = re.compile('^Fig')
     for p, path in enumerate(all_paths):
-        if (path == '../output/extracted_0/40-REAL/Phase_2_-_Travaux_CF/13-Suivi_marché/03-Réceptions/2017-01/Passy_avancement_fabrication_janvier_2017_rev.0.xlstxt'):
-            begin = True
-        if (begin and (exp.match(path.split('/')[-1]) == None)):
-            left_paths.append(path)
+        left_paths.append(path)
     return left_paths
 
 # SENTENCE TOKENIZATION
