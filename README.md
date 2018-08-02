@@ -20,7 +20,7 @@ This python code takes as input a input_root containing directories of "files.tx
 The "files.txt" are tokenized data in the following form : (word,stemmed_word,pos_tag)
 
 We visit all this files and perform a k-core approach for each file. 
-We recreate the same files and folders tree and save the .csv of keywords and graph for density and inflexion method.
+We recreate the same files and folders tree and save the .csv of keywords and graph for both density and inflexion methods.
 
 The parameters of this python code are :
 
@@ -36,3 +36,4 @@ The parameters of this python code are :
 - arg6...n: the pos tag to keep (see the script) (ADJ,NOUN,VERB...)
 
 This script contains the **Inflexion method function** and the **Density method function**
+
