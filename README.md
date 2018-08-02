@@ -1,7 +1,8 @@
 # Keywords_extraction_with_GOW
 
-- First we present an example of the methods used to extract keywords in the **Graph of words and keywords extraction.ipynb**.
-- Then we give a code to compute the k_core and obtain the graphs of directories of files or all files in directories containing sub-directories
+- First we present an example of the methods used to extract keywords (see **Graph of words and keywords extraction.ipynb** and **K-truss_code_example.ipynb**)
+- Then we give a code to compute the k_core and obtain the graphs of directories of files or all files in directories containing sub-directories (see **K_core_corpus.py**)
+- We also give an implementation of the K-truss algorithm (see **K-truss_code.py**)
 - We make a time analysis to see the evolution of some words through time, in order to detect events related to them. 
 
 ## Libraries 
