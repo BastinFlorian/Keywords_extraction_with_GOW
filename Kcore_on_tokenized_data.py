@@ -245,7 +245,7 @@ def inflexion_method(output_density):
    n=1
    for i in range(len(output_density)-1):
        CD.append(output_density[i+1][1]-output_density[i][1])
-       for i in range(2,len(CD)-1)
+       for i in range(2,len(CD)-1):
            if(CD[i+1]<0 and CD[i]>0):
                n=i
    return(n)    
@@ -254,24 +254,25 @@ def inflexion_method(output_density):
 ###### GIVE OPTIMIZED NUMBER OF K_CORE TO STUDY ######
 
 def get_optimized_nb_keywords(G,dens_methode,inf_method):   
-    print("Optimized number ok keywors starts"
+    print("Optimized number ok keywors starts")
     if(dens_methode):
 
         output_density=output_dens(G)
         D_n=dens_function(output_density) 
-        print("Optimized number of keywords finished")
+        print("Optimized number of keywords finished with density method")
         return(elbow_function(D_n))
 
     else:
 
         output_density=output_dens(G)
         n=inflexion_method(output_density)
-        print("Optimized number of keywords finished")
+        print("Optimized number of keywords finished with inflexion method")
         return(n)    
 
 
 
 ###### FUNCTION OF KEYWORDS EXTRACTION ###### 
+          
 def K_core_function(root,file_name,root_output,pos_tag_to_keep,lower,w):
     print("K_core start")
 
@@ -319,6 +320,7 @@ def K_core_function(root,file_name,root_output,pos_tag_to_keep,lower,w):
         inf_df=pd.DataFrame(columns=['Keywords','Core_number','Inflexion_value'],data=np.array([inf_keyTerms,inf_values,[inf_value]*len(inf_keyTerms)]).T)
         dens_df=pd.DataFrame(columns=['Keywords','Core_number','Density_value'],data=np.array([dens_keyTerms,dens_values,[dens_value]*len(dens_keyTerms)]).T)
 
+        # We fix the maximal number of nodes to 50 in order to have a better vizualisation. 
         if(len(inf_subgraph_k_core.nodes)>50):
             inf_subgraph_k_core=inf_subgraph_k_core.subgraph(inf_keyTerms[:50])
 
@@ -338,9 +340,9 @@ def K_core_function(root,file_name,root_output,pos_tag_to_keep,lower,w):
             name_png_dens="{}/subgraph_dens_w:{}_POS:{}.png".format(os.path.join(root_output,'.'.join(file_name.split('.')[:-1])),w,'-'.join(pos_tag_to_keep))
             name_doc_inf="{}/keywords_inf_w:{}_POS:{}.xls".format(os.path.join(root_output,'.'.join(file_name.split('.')[:-1])),w,'-'.join(pos_tag_to_keep))
             name_png_inf="{}/subgraph_inf_w:{}_POS:{}.png".format(os.path.join(root_output,'.'.join(file_name.split('.')[:-1])),w,'-'.join(pos_tag_to_keep))
-         print(name_doc_dens)
     if(len(dens_subgraph_k_core.nodes)>0):
         plt.figure()
+        #The font_size parameter is estimated such that the visualization is better.
         nx.draw(inf_subgraph_k_core, with_labels=True,font_color='k',node_color='g',edge_color='y',font_size=max(min(20,500/len(inf_subgraph_k_core.nodes)),9),width=1,node_size=0)
         plt.savefig(name_png_inf)
         plt.close('all')
