@@ -1,17 +1,30 @@
 # Keywords_extraction_with_GOW
-Graph of words and keywords extraction 
 
-We used Networkx, Tex python library
+- First we present an example of the methods used to extract keywords in the **Graph of words and keywords extraction.ipynb**.
+- Then we give a code to compute the k_core and obtain the graphs of directories of files or all files in directories containing sub-directories
+- We make a time analysis to see the evolution of some words through time, in order to detect events related to them. 
+
+## Libraries 
+
+- Networkx to create and vizualize graphs 
+- Spacy to preprocess the text 
+
+## Papers implemented : 
+- The k-core is directly taken from Networkx library.
+- The k-truss is implemented following https://arxiv.org/abs/1205.6693
+- The density and inflexion methods are implemented following https://www.aclweb.org/anthology/D16-1191
 
 ## ***Graph of words and keywords extraction.ipynb***
 
 This notebook is dedicated to people who want to **extract keywords** from **text document** or **corpus documents** using a **graph approach**.
 
-The goal of this notebook is to extract keywords from a text file using three different approachs :
+The goal of this notebook is to extract keywords from a text file using four different approachs :
 - Best Coverage keywords extraction - http://www2013.w3c.br/proceedings/p715.pdf
 - Div Rank keywords extraction - http://clair.si.umich.edu/~radev/papers/SIGKDD2010.pdf
 - K-core Number - Python Library Networkx
 - K-Truss - https://arxiv.org/abs/1205.6693
+
+Through a french summary of Games of Thrones, we bring an example of the outputs of the four different approaches.
 
 
 ## ***K-core on tokennized data***
