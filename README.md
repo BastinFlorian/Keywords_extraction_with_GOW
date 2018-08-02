@@ -34,3 +34,5 @@ The parameters of this python code are :
 - arg5: (int): the value of the windows size. A window size of 5 means that an edge will be created between all the words separated from less than 5 words in the text
 
 - arg6...n: the pos tag to keep (see the script) (ADJ,NOUN,VERB...)
+
+This script contains the **Inflexion method function** and the **Density method function**
