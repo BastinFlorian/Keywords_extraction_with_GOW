@@ -51,3 +51,16 @@ The parameters of this python code are :
 
 This script contains the **Inflexion method function** and the **Density method function**
 
+
+## K-truss_code_example.ipynb
+
+This jupyter notebook is an example of the following script 
+
+## K-truss code 
+
+Two functions are implemented. 
+
+- The first one compute the K-truss of each node in G, the maximum non empty subgraph, the k from the maximum non empty subgraph and the necessary informations to compute the density and inflexion method. 
+- The second one gives the k-truss subgraph of the graph, where k is given as an input
+
+
