@@ -28,30 +28,6 @@ The goal of this notebook is to extract keywords from a text file using four dif
 Through a french summary of Games of Thrones, we bring an example of the outputs of the four different approaches.
 
 
-## ***K-core corpus***
-
-This python code takes as input a input_root containing directories of "files.txt" and subdirectories.
-The "files.txt" are tokenized data in the following form : (word,stemmed_word,pos_tag)
-
-We visit all this files and perform a k-core approach for each file. 
-We recreate the same files and folders tree and save the .csv of keywords and graph for both density and inflexion methods.
-
-The parameters of this python code are :
-
-- arg1 : input_root (from where we extract k_core graphs and keywords)
-
-- arg2 : output_root (where to save it)
-
-- arg3 : - 1 if all the files has to be treated independantly - 0 if we want one graph and one keywords .csv file in output (analyzed with all the files)
-- arg4: - 1 for words in lower case - 0 otherwise
-            
-- arg5: (int): the value of the windows size. A window size of 5 means that an edge will be created between all the words separated from less than 5 words in the text
-
-- arg6...n: the pos tag to keep (see the script) (ADJ,NOUN,VERB...)
-
-This script contains the **Inflexion method function** and the **Density method function**
-
-
 ## K-truss_code_example.ipynb
 
 This jupyter notebook is an example of the following script 
